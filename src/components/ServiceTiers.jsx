@@ -1,30 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Megaphone, BarChart3, Check } from 'lucide-react';
+import { Search, Megaphone, BarChart3, Check, Globe, Palette, ShoppingBag, Code2 } from 'lucide-react';
 
 const tiers = [
   {
     name: 'Launch',
-    price: '$2,500/mo',
-    highlight: 'Best for startups testing traction',
+    price: '$3,500/mo',
+    highlight: 'Best for new brands or fresh product launches',
     features: [
-      'Technical SEO audit + quick wins',
-      'Foundational keyword map & on-page fixes',
-      'Social content kit (8 posts/mo)',
-      'Basic ad campaigns (Search + Social)',
+      'Website build: Elementor or Framer (1–3 pages)',
+      'Shopify starter theme styling (optional)',
+      'Technical SEO setup + on-page fixes',
+      'Starter social kit (8 posts/mo)',
       'Monthly performance snapshot',
     ],
     accent: 'from-indigo-500 to-fuchsia-500',
   },
   {
     name: 'Scale',
-    price: '$5,500/mo',
-    highlight: 'Balanced growth across channels',
+    price: '$6,500/mo',
+    highlight: 'Full web + design + growth operating system',
     features: [
-      'SEO sprints (content + internal linking)',
-      '12–16 social posts + community loops',
-      'Conversion-focused ad funnels',
-      'Landing page optimization & CRO tests',
+      'Website: Framer or Elementor (5–8 pages) + CMS',
+      'Shopify template customization & CRO tweaks',
+      'SEO sprints (content + internal links)',
+      'Design support (brand + ad creatives)',
       'Weekly reporting & roadmap sync',
     ],
     featured: true,
@@ -32,13 +32,13 @@ const tiers = [
   },
   {
     name: 'Dominate',
-    price: '$9,500/mo',
+    price: '$10,000+/mo',
     highlight: 'Aggressive scale for category leaders',
     features: [
-      'Full-funnel SEO (topical authority + links)',
-      'Daily social engine + creator UGC',
-      'High-budget paid mix with incrementality',
-      'Advanced analytics & attribution',
+      'Multi-site or advanced Framer/WordPress systems',
+      'Custom Shopify sections & A/B testing',
+      'Full-funnel SEO + link building',
+      'Motion/3D creative & campaign systems',
       'Dedicated strategist + growth PM',
     ],
     accent: 'from-cyan-400 to-indigo-500',
@@ -62,19 +62,19 @@ export default function ServiceTiers() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300">
-            <Search size={14} className="text-indigo-400" />
-            SEO • Social • SEM • SMM
+            <Code2 size={14} className="text-indigo-400" />
+            Web Dev • Design • SEO • Social • Ads
           </div>
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Productized growth, packaged for clarity
+            Productized packages for speed and clarity
           </h2>
           <p className="mt-3 text-zinc-300">
-            Pick a plan, plug in your brand, and get a measurable engine across search, social, and paid—without reinventing the scope every month.
+            Choose a package or mix with individual services. Clean scopes, predictable timelines, compounding results.
           </p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {tiers.map((t, i) => (
+          {tiers.map((t) => (
             <MotionCard
               key={t.name}
               className={`relative rounded-2xl border ${
@@ -111,11 +111,12 @@ export default function ServiceTiers() {
         </div>
 
         {/* Channel highlights */}
-        <div id="services" className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div id="services" className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-4">
           {[
-            { icon: Search, title: 'Search Engine Optimization', copy: 'Technical foundations, content velocity, and topical authority that compounds organic traffic.' },
-            { icon: Megaphone, title: 'Social Media Marketing', copy: 'Narratives that spark conversation. Ship high-signal content and community loops.' },
-            { icon: BarChart3, title: 'Search + Social Ads', copy: 'Full-funnel paid strategy with creative testing, conversion tracking, and scale controls.' },
+            { icon: Globe, title: 'Elementor WordPress', copy: 'Flexible CMS, fast builds, and maintainable design systems with Elementor Pro.' },
+            { icon: Globe, title: 'Framer Websites', copy: 'Motion-rich marketing sites with components, CMS, and lightning performance.' },
+            { icon: ShoppingBag, title: 'Shopify Stores', copy: 'Conversion-first theme customization, PDP optimization, and A/B testing.' },
+            { icon: Palette, title: 'Graphic Design', copy: 'Brand identity, social kits, ad creative, and presentation design on tap.' },
           ].map((item) => (
             <motion.div
               key={item.title}
